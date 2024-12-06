@@ -1,2 +1,9 @@
 language: java
 jdk: oraclejdk8
+
+services:
+  - docker
+install:
+  - "./gradlew clean jar"
+script:
+  - ./gradlew test
